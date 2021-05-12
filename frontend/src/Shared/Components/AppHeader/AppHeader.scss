@@ -1,0 +1,26 @@
+.appHeaderContainer {
+    background: #c6d7de;
+    padding: 20px;
+    justify-content: space-between;
+    .navBar {
+        line-height: 86px;
+        .item {
+            margin: 0px 10px;
+            cursor: pointer;
+            &:hover {
+                color: #00ff;
+                font-weight: 600;
+                text-decoration: underline;
+            }
+        }
+        .active {
+            color: #00ff;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+    }
+    .userInfo {
+        padding-top: 25px;
+        text-align: right;
+    }
+}
