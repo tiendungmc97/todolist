@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Bar } from 'react-chartjs-2';
+import BarChart from './BarChart';
 
 class Report extends Component {
     constructor(props) {
@@ -7,32 +8,32 @@ class Report extends Component {
     }
 
     render() {
-        const data = {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [
-                {
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)',
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)',
-                    ],
-                    borderWidth: 1,
-                },
-            ],
-        };
+        const data = [
+            {
+                "id": "A",
+                "value": 46
+              },
+              {
+                "id": "B",
+                "value": 87
+              },
+            {
+                "id": "A",
+                "value": 300
+              },
+              {
+                "id": "B",
+                "value": 260
+              },
+            {
+                "id": "A",
+                "value": 500
+              },
+              {
+                "id": "B",
+                "value": 50
+              },
+            ]
 
         const options = {
             scales: {
@@ -45,26 +46,15 @@ class Report extends Component {
                 ],
             },
         };
-
+        let title = "Thống kê doanh số: "
 
         return (
-            <Fragment>
-                <>
-                    <div className='header'>
-                        <h1 className='title'>Vertical Bar Chart</h1>
-                        <div className='links'>
-                            <a
-                                className='btn btn-gh'
-                                href='https://github.com/reactchartjs/react-chartjs-2/blob/master/example/src/charts/VerticalBar.js'
-                            >
-                                Github Source
-                            </a>
-                        </div>
-                    </div>
-                    <Bar data={data} options={options} />
-                </>
-            </Fragment>
-        )
+            <BarChart
+                data={data}
+                title={title}
+                color="#70CAD1"
+          />
+            )
     }
 }
 
