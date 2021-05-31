@@ -8,6 +8,7 @@ import Org from '../../../Modules/Org/Org';
 import Service from '../../../Modules/Service/Service';
 import User from '../../../Modules/User/User';
 import Report from '../../../Modules/Report/Main';
+import Panigation from '../../../Modules/Panigation/Panigation';
 
 class App extends React.Component {
     render() {
@@ -22,6 +23,7 @@ class App extends React.Component {
                     <Route path={`${path}/org`} component={Org} />
                     <Route path={`${path}/service`} component={Service} />
                     <Route path={`${path}/user`} component={User} />
+                    <Route path={`${path}/panigation`} component={Panigation} />
                     <Route path={`${path}/report`} component={Report} />
 
                 </Switch>
