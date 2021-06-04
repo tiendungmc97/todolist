@@ -7,7 +7,8 @@ import Location from '../../../Modules/Location/Location';
 import Org from '../../../Modules/Org/Org';
 import Service from '../../../Modules/Service/Service';
 import User from '../../../Modules/User/User';
-import Report from '../../../Modules/Report/Main';
+import Report from '../../../Modules/Report/Main'; 
+import Table from '../../../Modules/Table/Table'; 
 import Panigation from '../../../Modules/Panigation/Panigation';
 
 class App extends React.Component {
@@ -25,6 +26,7 @@ class App extends React.Component {
                     <Route path={`${path}/user`} component={User} />
                     <Route path={`${path}/panigation`} component={Panigation} />
                     <Route path={`${path}/report`} component={Report} />
+                    <Route path={`${path}/table`} component={Table} />
 
                 </Switch>
             </div>
